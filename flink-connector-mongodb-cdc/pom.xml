@@ -23,10 +23,46 @@ under the License.
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>flink-connector-mongodb-cdc</artifactId>
-    <name>flink-connector-mongodb-cdc</name>
-    <version>2.3.2</version>
+    <groupId>org.genitus</groupId>
+    <artifactId>gatling-connector-mongodb-cdc</artifactId>
+    <version>2.3.3</version>
     <packaging>jar</packaging>
+    <properties>
+        <cdc.version>2.3.0</cdc.version>
+
+        <!-- plugin versions -->
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <scala-maven-plugin.version>4.8.1</scala-maven-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
+        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>aliyun maven repository</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository>
+            <id>iflytek</id>
+            <name>iflyte maven repository</name>
+            <url>https://depend.iflytek.com/artifactory/hy-mvn-3rd-private</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>iflytek-releases</id>
+            <name>iflytek release repository</name>
+            <url>https://depend.iflytek.com/artifactory/hy-mvn-3rd-private</url>
+        </repository>
+        <snapshotRepository>
+            <id>iflytek-snapshots</id>
+            <name>iflytek snapshot repository</name>
+            <url>https://depend.iflytek.com/artifactory/hy-mvn-3rd-private</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <dependencies>
         <!-- Debezium dependencies -->
